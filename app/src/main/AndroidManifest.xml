@@ -12,23 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GroceryGuruDerrick"
         tools:targetApi="31">
+          <activity
+              android:name=".SplashScreenActivity"
+              android:exported="true"
+              android:theme="@style/Theme.Design.Light.NoActionBar">
+          <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+
+               <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+        </activity>
         <activity
             android:name=".FireBaseTestActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.GroceryGuruDerrick">
-        </activity>
+            android:theme="@style/Theme.GroceryGuruDerrick"/>
     </application>
 
 </manifest>
