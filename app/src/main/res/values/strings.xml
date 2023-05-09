@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Grocery Guru-Derrick</string>
+    <string name="app_name">Grocery Guru</string>
+    <string name="button1_text">Click Me!</string>
 </resources>
