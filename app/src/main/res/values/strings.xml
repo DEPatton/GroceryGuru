@@ -3,7 +3,10 @@
     <string name="button1_text">Click Me!</string>
     <string name="grocery_guru_logo">Grocery Guru Logo</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Home">Home</string>
+    <string name="Search">Search</string>
+    <string name="Grocery">Grocery</string>
+    <string name="Favorites">Favorites</string>
 </resources>
