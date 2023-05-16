@@ -31,10 +31,6 @@
             android:name=".FireBaseTestActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.GroceryGuruDerrick" />
     </application>
 
 </manifest>
