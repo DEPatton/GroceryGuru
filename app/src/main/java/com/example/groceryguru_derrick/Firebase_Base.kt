@@ -16,7 +16,7 @@ class Firebase_Base {
         "password" to "nullPW",
     )
 
-    fun WriteToCollection(){
+    fun writeToUserCollection(){
 
         db.collection("users")
             .add(user)
@@ -28,7 +28,7 @@ class Firebase_Base {
             }
     }
 
-    fun ReadFromCollection(){
+    fun readFromUserCollection(){
 
         db.collection("users")
             .get()
