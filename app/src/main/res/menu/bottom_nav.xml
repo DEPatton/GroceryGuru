@@ -5,15 +5,14 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/Home" />
 
-    <item android:id="@+id/navigation_search"
-        android:icon="@drawable/baseline_search_24"
-        android:title="@string/Search"/>
+    <item android:title="@string/Profile"
+        android:icon="@drawable/baseline_person_24"
+        android:id= "@+id/navigation_profile"/>
 
-    <item android:id="@+id/navigation_grocery"
+    <item android:title="@string/Grocery"
         android:icon="@drawable/baseline_store_24"
-        android:title="@string/Grocery"/>
+        android:id="@+id/navigation_grocery"/>
 
-    <item android:id="@+id/navigation_favorites"
-        android:icon="@drawable/baseline_favorite_24"
-        android:title="@string/Favorites"/>
+
+
 </menu>
