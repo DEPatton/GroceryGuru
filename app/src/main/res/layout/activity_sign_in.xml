@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageButton
+        android:id="@+id/backButton_SignUp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/secondary_green"
+        android:contentDescription="@string/back_button"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:onClick="onBackPress1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Username2"
+        android:layout_width="365dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:hint="Username"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="351dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password2"
+        android:layout_width="365dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        android:hint="Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/secondary_green"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="351dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/noaccount_button"
+        android:layout_width="277dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="260dp"
+        android:background="@android:color/transparent"
+        android:onClick="onRegisterPress"
+        android:text="No account? Register." />
+
+    <Button
+        android:id="@+id/SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="360dp"
+        android:background="@color/secondary_green"
+        android:onClick="onSignMeUp"
+        android:text="Sign In" />
+
+</FrameLayout>
