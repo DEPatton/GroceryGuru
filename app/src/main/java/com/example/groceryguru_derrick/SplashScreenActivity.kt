@@ -13,12 +13,10 @@ class SplashScreenActivity : AppCompatActivity() {
 
         ivFood?.alpha = 0f
         ivFood?.animate()?.setDuration(2000)?.alpha(1f)?.withEndAction {
-            val i = Intent(this, HomeActivity::class.java)
+            val i = Intent(this, MainActivity::class.java)  // change this line
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
-
-
     }
 }
