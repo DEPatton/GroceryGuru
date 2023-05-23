@@ -12,9 +12,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_screen_layout)
     }
 
-    fun onSignUpPress(view: View?){
+    fun onSignInPress(view: View?){
 
-        val i = Intent(this, SignUpActivity::class.java)
+        val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
         finish()
 
