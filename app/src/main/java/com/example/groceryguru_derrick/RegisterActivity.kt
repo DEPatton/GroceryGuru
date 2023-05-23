@@ -13,7 +13,7 @@ class RegisterActivity : AppCompatActivity() {
 
     fun onBackClick1(view : View?) {
 
-        val i = Intent(this, HomeActivity::class.java)
+        val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
         finish()
 

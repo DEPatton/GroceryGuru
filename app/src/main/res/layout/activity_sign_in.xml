@@ -7,16 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/backButton_SignUp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/secondary_green"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/back_button"
-        android:foreground="?attr/actionModeCloseDrawable"
-        android:onClick="onBackPress1" />
+        android:onClick="onBackPress1"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Username2"
