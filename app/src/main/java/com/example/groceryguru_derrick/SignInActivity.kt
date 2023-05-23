@@ -25,7 +25,7 @@ class SignInActivity : AppCompatActivity() {
 
     fun onBackPress1(view: View?) {
 
-        val i = Intent(this, HomeActivity::class.java)
+        val i = Intent(this, LoginActivity::class.java)
         startActivity(i)
         finish()
 
