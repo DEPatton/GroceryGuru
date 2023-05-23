@@ -11,7 +11,5 @@
     <string name="LoginName">Login/Sign Up Page</string>
     <string name="HomePageName">Home</string>
     <string name="GroceryListName">Grocery List Manager</string>
-    <string name="Profile_Skeleton">Profile Name</string>
-    <string name="ProfileName">Profile </string>
 
 </resources>
