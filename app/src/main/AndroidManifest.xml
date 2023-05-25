@@ -6,13 +6,23 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/dish"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/baseline_fastfood_24"
+        android:roundIcon="@drawable/dish"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GroceryGuruDerrick"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBJjbObfjE5jnysF9x-Wdd6slP373U3GGU"/>
         <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".StoreLocatorActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -23,18 +33,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".FireBaseTestActivity"
+            android:name=".SignInActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.GroceryGuruDerrick" />
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

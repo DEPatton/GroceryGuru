@@ -4,21 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FireBaseTestActivity">
+    tools:context=".StoreLocatorActivity">
 
-    <Button
-        android:id="@+id/test_button"
-        android:layout_width="206dp"
-        android:layout_height="124dp"
-        android:background="#82FFAF"
-        android:onClick="onTestButtonPress"
-        android:text="@string/button1_text"
-        android:textSize="34sp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapView1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="TextSizeCheck" />
+        tools:layout="@layout/activity_store_locator"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
