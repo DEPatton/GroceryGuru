@@ -7,7 +7,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="back_button">Back</string>
-    <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -16,4 +15,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="MealName">Meal Manager</string>
+    <string name="StoreName">Store Locator</string>
+    <string name="LoginName">Login/Sign Up Page</string>
+    <string name="HomePageName">Home</string>
+    <string name="GroceryListName">Grocery List Manager</string>
 </resources>
