@@ -7,6 +7,20 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="50dp">
 
+    <ImageView
+        android:id="@+id/backButton_SignUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/back_button"
+        android:onClick="onBackPress"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
     <Button
         android:id="@+id/SignInButton"
         android:layout_width="212dp"

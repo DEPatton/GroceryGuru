@@ -8,9 +8,7 @@ import com.google.firebase.ktx.Firebase
 class Firebase_Base {
 
     private val db = Firebase.firestore
-    public val user = hashMapOf(
-        "firstName" to "nullFN",
-        "lastName" to "nullLN",
+    private val user = hashMapOf(
         "email" to "nullEM",
         "username" to "nullUN",
         "password" to "nullPW",

@@ -9,7 +9,7 @@
         android:id="@+id/button10"
         android:layout_width="244dp"
         android:layout_height="47dp"
-        android:text="Button"
+        android:text="Settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
@@ -19,7 +19,7 @@
         android:id="@+id/button7"
         android:layout_width="244dp"
         android:layout_height="47dp"
-        android:text="Button"
+        android:text="Friends"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -29,7 +29,7 @@
         android:id="@+id/button8"
         android:layout_width="244dp"
         android:layout_height="47dp"
-        android:text="Favorites"
+        android:text="Messages"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -41,7 +41,7 @@
         android:id="@+id/button9"
         android:layout_width="244dp"
         android:layout_height="47dp"
-        android:text="Button"
+        android:text="Favorites"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -51,24 +51,11 @@
         android:layout_width="98dp"
         android:layout_height="101dp"
         android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="585dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="@string/Profile_Skeleton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -134,12 +121,24 @@
         android:id="@+id/button6"
         android:layout_width="244dp"
         android:layout_height="47dp"
-        android:text="Button"
+        android:text="Manage Profile"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onSignUpPress"
+        android:text="@string/action_sign_in"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
