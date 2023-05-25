@@ -35,27 +35,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.527" />
-  
-</androidx.constraintlayout.widget.ConstraintLayout>
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Email"></EditText>
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Email"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginRight="16dp"
-        android:hint="Password"></EditText>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
