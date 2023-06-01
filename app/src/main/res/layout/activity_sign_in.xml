@@ -23,10 +23,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
-        android:hint="Username"
-        tools:ignore="MissingConstraints">
+        android:hint="Email"
+        tools:ignore="InvalidId,MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UsernameMain2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
@@ -47,6 +48,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PasswordMain2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
