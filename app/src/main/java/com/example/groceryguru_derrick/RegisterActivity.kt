@@ -1,25 +1,14 @@
 package com.example.groceryguru_derrick
 
-import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.groceryguru_derrick.databinding.ActivityRegisterBinding
-import com.example.groceryguru_derrick.databinding.ActivitySignInBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.auth.User
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -36,15 +25,16 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         binding.regButton.setOnClickListener {
-            val username = binding.UsernameMain1.text.toString().trim()
-            val email = binding.EmailMain1.text.toString().trim()
-            val pass = binding.PasswordMain1.text.toString().trim()
+            val username = binding.UsernameMain1.text.toString().trim() //Entered Username Variable
+            val email = binding.EmailMain1.text.toString().trim() //Entered Email Variable
+            val pass = binding.PasswordMain1.text.toString().trim() // Entered Email Variable
 
             if (username.isNotBlank() && email.isNotBlank() && pass.isNotBlank()) {
 
                 this.auth.createUserWithEmailAndPassword(email, pass)
-                    .addOnCompleteListener() { task: Task<AuthResult> ->
-                        if (task.isSuccessful) {
+                    .addOnCompleteListener { task: Task<AuthResult> ->
+                        if (task.isSuccessful)
+                        {
                             //Registration Okay!
 
                             val intent = Intent(this, SignInActivity::class.java)
@@ -52,14 +42,16 @@ class RegisterActivity : AppCompatActivity() {
 
                             sendVerifiedEmail()
 
-                        } else {
+                        }
+                        else //Registration Failed
+                        {
 
                             Toast.makeText(this, "Failed to create account", Toast.LENGTH_SHORT)
                                 .show()
 
                         }
                     }
-            } else //Registration Failed
+            } else //Empty field on form
             {
 
                 Toast.makeText(this, "Empty fields are not allowed", Toast.LENGTH_SHORT).show()

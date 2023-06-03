@@ -39,4 +39,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
         finish()
     }
+    fun manageProfileClick(view: View?)
+    {
+
+        val i = Intent(this, ManageProfileActivity::class.java)
+        startActivity(i)
+        finish()
+    }
 }

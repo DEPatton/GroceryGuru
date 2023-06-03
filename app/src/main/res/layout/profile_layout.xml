@@ -68,25 +68,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="84dp" />
+        app:layout_constraintGuide_begin="74dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="328dp" />
+        app:layout_constraintGuide_begin="336dp" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_dashboard_black_24dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.722"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -138,6 +138,7 @@
         android:layout_width="244dp"
         android:layout_height="47dp"
         android:layout_marginBottom="12dp"
+        android:onClick="manageProfileClick"
         android:text="Manage Profile"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
