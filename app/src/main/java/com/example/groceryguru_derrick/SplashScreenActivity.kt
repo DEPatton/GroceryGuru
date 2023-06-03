@@ -9,7 +9,7 @@ class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        val ivFood: ImageView? = findViewById(R.id.ivfood)
+        val ivFood: ImageView? = findViewById(R.id.ivFood)
 
         ivFood?.alpha = 0f
         ivFood?.animate()?.setDuration(2000)?.alpha(1f)?.withEndAction {

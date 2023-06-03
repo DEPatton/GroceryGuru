@@ -1,7 +1,9 @@
 package com.example.groceryguru_derrick
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.groceryguru_derrick.databinding.ActivityMainBinding
 
@@ -30,5 +32,18 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
+    }
+    fun onSignUpPress(view: View?){
+
+        val i = Intent(this, LoginActivity::class.java)
+        startActivity(i)
+        finish()
+    }
+    fun manageProfileClick(view: View?)
+    {
+
+        val i = Intent(this, ManageProfileActivity::class.java)
+        startActivity(i)
+        finish()
     }
 }

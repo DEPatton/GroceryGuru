@@ -22,8 +22,7 @@ class StoreLocatorActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         googleMap.addMarker(
             MarkerOptions()
-                .position(LatLng(0.0, 0.0))
-                .title("Marker")
+                .position(LatLng(36.5054, -117.0794))
         )
     }
 }

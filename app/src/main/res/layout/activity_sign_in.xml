@@ -23,10 +23,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
-        android:hint="Username"
-        tools:ignore="MissingConstraints">
+        android:hint="Email"
+        tools:ignore="InvalidId,MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UsernameMain2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
@@ -47,6 +48,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PasswordMain2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
@@ -56,7 +58,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/noaccount_button"
+        android:id="@+id/noAccount_button"
         android:layout_width="277dp"
         android:layout_height="38dp"
         android:layout_marginStart="65dp"
@@ -71,8 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="360dp"
-        android:background="@color/secondary_green"
-        android:onClick="onSignMeUp"
+        android:background="#C8C8C8"
         android:text="Sign In" />
 
 </FrameLayout>
