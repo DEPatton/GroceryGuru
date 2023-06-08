@@ -19,5 +19,4 @@ class ManageProfileActivity : AppCompatActivity() {
         finish()
 
     }
-
 }
