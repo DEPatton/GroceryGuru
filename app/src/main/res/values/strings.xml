@@ -22,4 +22,6 @@
     <string name="GroceryListName">Grocery Manager</string>
     <string name="ProfileName">Profile</string>
     <string name="Profile_Skeleton">Profile</string>
+    <string name="for_breakfast">For <b>Breakfast Today</b></string>
+    <string name="ingredients"><b>Ingredients</b></string>
 </resources>
