@@ -10,17 +10,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="184dp"
-        android:layout_height="68dp"
-        android:text="Settings"
+        android:layout_width="276dp"
+        android:layout_height="62dp"
+        android:text="Account Settings"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <ImageButton
         android:id="@+id/imageButton2"

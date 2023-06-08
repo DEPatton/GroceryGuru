@@ -17,10 +17,11 @@
     <string name="login_failed">"Login failed"</string>
     <string name="MealName">Meal Manager</string>
     <string name="StoreName">Store Locator</string>
-    <string name="LoginName">Login/Sign Up Page</string>
+    <string name="LoginName">Login/Register</string>
     <string name="HomePageName">Home</string>
     <string name="GroceryListName">Grocery Manager</string>
     <string name="ProfileName">Profile</string>
     <string name="Profile_Skeleton">Profile</string>
     <string name="Greeting">Welcome Back, $user</string>
+    <string name="AccountSettings">Account Settings</string>
 </resources>
