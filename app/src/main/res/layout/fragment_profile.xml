@@ -1,16 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile">
+    tools:context=".Profile"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/ProfileName"
-        android:textSize="26sp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bottom_bg"
+            android:layout_width="415dp"
+            android:layout_height="219dp"
+            android:layout_marginBottom="-6dp"
+            android:src="@drawable/bottom_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/top_bg"
+            android:layout_width="411dp"
+            android:layout_height="201dp"
+            android:layout_marginTop="-1dp"
+            android:src="@drawable/top_bg"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:src="@drawable/profile_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/manage_account"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_button_style"
+                    android:drawableStart="@drawable/manage_accounts_24px"
+                    android:drawablePadding="20dp"
+                    android:elevation="50dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="30dp"
+                    android:text="Manage Account"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.436" />
+
+                <Button
+                    android:id="@+id/My_Recipes"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_button_style"
+                    android:drawableStart="@drawable/import_contacts_24px"
+                    android:drawablePadding="20dp"
+                    android:elevation="50dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="30dp"
+                    android:text="My Recipes"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.543" />
+
+                <Button
+                    android:id="@+id/Favorites"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_button_style"
+                    android:drawableStart="@drawable/favorite_24px"
+                    android:drawablePadding="20dp"
+                    android:elevation="50dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="30dp"
+                    android:text="Favorites"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.647" />
+
+                <Button
+                    android:id="@+id/saved"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_button_style"
+                    android:drawableStart="@drawable/bookmark_24px"
+                    android:drawablePadding="20dp"
+                    android:elevation="50dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="30dp"
+                    android:text="Saved"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.75" />
+
+                <Button
+                    android:id="@+id/setting"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_button_style"
+                    android:drawableStart="@drawable/settings_24px"
+                    android:drawablePadding="20dp"
+                    android:elevation="50dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="30dp"
+                    android:text="Settings"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.856" />
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="232dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/ProfileName"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/manage_account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
