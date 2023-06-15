@@ -35,7 +35,7 @@ class Firebase_Base {
     }
 
     //Function reads user data from firebase.
-    fun readUsername(collectionName : String){
+    fun getStringData(collectionName : String){
 
         db.collection(collectionName)
             .get()
