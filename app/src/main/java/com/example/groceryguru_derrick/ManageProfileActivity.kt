@@ -8,7 +8,7 @@ import android.view.View
 class ManageProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_manage_profile)
+        setContentView(R.layout.activity_account_settings)
     }
 
     fun mapPressed(view: View?)

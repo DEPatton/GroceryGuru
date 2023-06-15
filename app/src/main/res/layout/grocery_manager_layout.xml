@@ -38,7 +38,6 @@
         android:backgroundTint="@color/green"
         android:minHeight="65dp"
         android:minWidth="65dp"
-        android:src="@drawable/baseline_add_circle_24"
         />
 
 

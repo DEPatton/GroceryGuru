@@ -47,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
         finish()
     }
+    fun manageAccountClick(view: View?){
+        val i = Intent(this, ManageProfileActivity::class.java)
+        startActivity(i)
+        finish()
+    }
 
     // API Thread
     private fun fetchRecipeData(): Thread
@@ -92,6 +97,11 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
+    }
+    fun backPress(view: View){
+        val i = Intent(this,Profile()::class.java)
+        startActivity(i)
+        finish()
     }
     fun onAddButtonClick(v: View) {
         AddNewTask.newInstance()

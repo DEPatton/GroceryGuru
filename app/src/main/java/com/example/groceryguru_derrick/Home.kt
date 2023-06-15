@@ -74,11 +74,12 @@ class Home : Fragment() {
             // Inflate the layout for this fragment
             return inflater.inflate(R.layout.fragment_home, container, false)
         }
-}
+
             // Move to the next day
-            calendar.add(Calendar.DAY_OF_MONTH, 1)
+            /*calendar.add(Calendar.DAY_OF_MONTH, 1)
         }
     }
+             */
 
     companion object {
         @JvmStatic
