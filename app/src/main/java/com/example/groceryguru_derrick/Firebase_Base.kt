@@ -22,6 +22,18 @@ class Firebase_Base {
             }
     }
 
+    fun writeTask(taskData : String) {
+
+        db.collection("users")
+            .add(taskData)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
+    }
+
     //Function reads user data from firebase.
     fun readUsername(collectionName : String){
 
