@@ -11,9 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!--greets the user by username and time of day, with also an emoji!-->
-
-        <!--For (meal based on time of day) Today-->
         <TextView
 
             android:id="@+id/greetingTextView"
@@ -44,48 +41,66 @@
             <TextView
                 android:id="@+id/day1"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/day2"
                 android:layout_width="0dp"
-                android:layout_height="39dp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/day3"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/day4"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/day5"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/day6"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/day7"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
-            <!-- Repeat for day2, day3, ..., da
-
-            y7 -->
 
         </LinearLayout>
 
@@ -177,7 +192,7 @@
             android:layout_width="350dp"
             android:layout_height="250dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="5dp"
@@ -213,8 +228,6 @@
                         android:text="Conversion 1" />
 
                 </LinearLayout>
-
-                <!-- Repeat above LinearLayout for each ingredient -->
 
             </LinearLayout>
 
