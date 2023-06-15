@@ -38,13 +38,18 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.commit()
     }
-
     fun onSignUpPress(view: View?){
 
         val i = Intent(this, LoginActivity::class.java)
         startActivity(i)
         finish()
+    }
+    fun manageProfileClick(view: View?)
+    {
 
+        val i = Intent(this, ManageProfileActivity::class.java)
+        startActivity(i)
+        finish()
     }
     fun onAddButtonClick(v: View) {
         AddNewTask.newInstance()

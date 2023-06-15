@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.groceryguru_derrick.databinding.ActivityMainBinding
+import com.example.groceryguru_derrick.databinding.ActivitySignInBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -12,12 +14,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_screen_layout)
     }
 
-    fun onSignInPress(view: View?){
+    fun onSignIn(view : View?){
 
         val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
         finish()
-
     }
 
     fun onBackPress(view: View?){
@@ -25,6 +26,5 @@ class LoginActivity : AppCompatActivity() {
         val i = Intent(this, MainActivity::class.java)
         startActivity(i)
         finish()
-
     }
 }
