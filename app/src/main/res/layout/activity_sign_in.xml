@@ -37,7 +37,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ChangeUsername"
+        android:id="@+id/Password2"
         android:layout_width="365dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
@@ -48,7 +48,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ChangeUsernameMain"
+            android:id="@+id/PasswordMain2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
