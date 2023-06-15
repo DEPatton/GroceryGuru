@@ -60,6 +60,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    //Function sends verification email to the user when called.
     private fun sendVerifiedEmail() {
 
         val user = auth.currentUser
