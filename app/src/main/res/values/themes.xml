@@ -2,5 +2,10 @@
 <resources>
 
     <style name="Theme.GroceryGuruDerrick" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="DialogStyle" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
 
 </resources>

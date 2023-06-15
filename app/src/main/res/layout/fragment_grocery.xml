@@ -14,4 +14,11 @@
         android:textSize="26sp"
         android:layout_gravity="center"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="The Grocery List is going to be here"
+        android:textSize="26sp"
+        />
+
 </FrameLayout>
