@@ -14,6 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_screen_layout)
     }
 
+    //Transition to Sign In screen.
     fun onSignIn(view : View?){
 
         val i = Intent(this, SignInActivity::class.java)
@@ -21,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
+    //Back button.
     fun onBackPress(view: View?){
 
         val i = Intent(this, MainActivity::class.java)

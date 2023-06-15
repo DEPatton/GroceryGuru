@@ -34,26 +34,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Button for register.
     fun onSignUpPress(view: View?){
 
         val i = Intent(this, LoginActivity::class.java)
         startActivity(i)
         finish()
-    }
-    fun manageProfileClick(view: View?)
-    {
-
-        val i = Intent(this, ManageProfileActivity::class.java)
-        startActivity(i)
-        finish()
-    }
-
-    fun manageAccountClick(view : View?) {
-
-        val i = Intent(this, SettingsActivity::class.java)
-        startActivity(i)
-        finish()
-
     }
 
     // API Thread
@@ -85,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Function that updates UI elements when loaded.
     private fun updateUI(request: Request)
     {
         runOnUiThread{
