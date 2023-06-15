@@ -9,12 +9,12 @@ class Firebase_Base {
 
     private val db = Firebase.firestore
     private val user = hashMapOf(
-        "email" to "nullEM",
         "username" to "nullUN",
+        "email" to "nullEM",
         "password" to "nullPW",
     )
 
-    fun writeToUserCollection(){
+    fun writeToUserCollection() {
 
         db.collection("users")
             .add(user)
@@ -26,9 +26,35 @@ class Firebase_Base {
             }
     }
 
+    fun writeUserName(userData : HashMap<String, String>) {
+
+        db.collection("users")
+            .add(userData)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
+    }
+
     fun readFromUserCollection(){
 
         db.collection("users")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d(TAG, "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents.", exception)
+            }
+    }
+
+    fun readUsername(collectionName : String){
+
+        db.collection(collectionName)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {

@@ -10,7 +10,7 @@
         android:layout_height="200dp"
         android:src="@drawable/baseline_fastfood_24"
         android:layout_centerInParent="true"
-        android:id="@+id/ivfood"
+        android:id="@+id/ivFood"
         android:contentDescription="@string/grocery_guru_logo"/>
 
 </RelativeLayout>
