@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     fun onMenuClick(view:View)
     {
         // Referencing and Initializing the button
-        menuimagebutton = findViewById(R.id.clickBtn)
+        menuimagebutton = findViewById(R.id.menu)
 
         // Setting onClick behavior to the button
         menuimagebutton.setOnClickListener {
