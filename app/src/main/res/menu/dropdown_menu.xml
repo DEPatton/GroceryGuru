@@ -14,7 +14,7 @@
         android:title="@string/LoginName" />
     <item
         android:id="@+id/AccountSettings"
-        android:title="@string/AccountSettings"
+        android:title="Account Settings"
         android:visible="false"/>
     <item
         android:id="@+id/Home"
