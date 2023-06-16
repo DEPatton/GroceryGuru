@@ -17,6 +17,10 @@ class Home : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+  
+        /*fun updateWeekView() {
+            val calendar = Calendar.getInstance()
+            val currentDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +65,16 @@ class Home : Fragment() {
             } else {
                 dayView?.background = null
             }
-
+    }*/
+  
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            // Inflate the layout for this fragment
+            return inflater.inflate(R.layout.fragment_home, container, false)
+        }
+}
             // Move to the next day
             calendar.add(Calendar.DAY_OF_MONTH, 1)
         }
@@ -78,3 +91,4 @@ class Home : Fragment() {
             }
     }
 }
+

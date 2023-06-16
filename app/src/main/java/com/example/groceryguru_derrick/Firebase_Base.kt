@@ -8,24 +8,8 @@ import com.google.firebase.ktx.Firebase
 class Firebase_Base {
 
     private val db = Firebase.firestore
-    private val user = hashMapOf(
-        "username" to "nullUN",
-        "email" to "nullEM",
-        "password" to "nullPW",
-    )
 
-    fun writeToUserCollection() {
-
-        db.collection("users")
-            .add(user)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-            }
-    }
-
+    //Function writes user data to firebase collection.
     fun writeUserName(userData : HashMap<String, String>) {
 
         db.collection("users")
@@ -38,21 +22,20 @@ class Firebase_Base {
             }
     }
 
-    fun readFromUserCollection(){
+    fun writeTask(taskData : String) {
 
         db.collection("users")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    Log.d(TAG, "${document.id} => ${document.data}")
-                }
+            .add(taskData)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
             }
-            .addOnFailureListener { exception ->
-                Log.w(TAG, "Error getting documents.", exception)
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
             }
     }
 
-    fun readUsername(collectionName : String){
+    //Function reads user data from firebase.
+    fun getStringData(collectionName : String){
 
         db.collection(collectionName)
             .get()
