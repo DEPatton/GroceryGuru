@@ -19,11 +19,18 @@
     <string name="StoreName">Store Locator</string>
     <string name="LoginName">Login/Sign Up Page</string>
     <string name="HomePageName">Home</string>
-    <string name="GroceryListName">Grocery Manager</string>
+    <string name="GroceryListName">Grocery</string>
+    <string name="GroceryList">My <b>Grocery List</b></string>
     <string name="ProfileName">Profile</string>
     <string name="Profile_Skeleton">Profile</string>
     <string name="example_appwidget_description" />
     <string name="element_text" />
     <string name="for_breakfast">For <b>Breakfast Today</b></string>
     <string name="ingredients"><b>Ingredients</b></string>
+    <string name="manage_account"><b>Manage Account</b></string>
+    <string name="my_recipe"><b>My Recipes</b></string>
+    <string name="favorites"><b>Favorites</b></string>
+    <string name="Saved"><b>Saved</b></string>
+    <string name="settings"><b>Settings</b></string>
+
 </resources>
