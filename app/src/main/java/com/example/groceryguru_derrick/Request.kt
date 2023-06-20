@@ -13,5 +13,5 @@ class Request(
     var mealType: String,
     var time: String,
     var imageSize: String? = "THUMBNAIL",
-    var random: Boolean,
+    //var random: Boolean, //To be implemented later.
 )
