@@ -22,4 +22,10 @@
     <string name="GroceryListName">Grocery Manager</string>
     <string name="ProfileName">Profile</string>
     <string name="Profile_Skeleton">Profile</string>
+    <string name="AccountSettings">Account Settings</string>
+    <string name="Greeting">Welcome Back, $user</string>
+    <string name="for_breakfast">For Breakfast</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="example_appwidget_description" />
+    <string name="element_text" />
 </resources>

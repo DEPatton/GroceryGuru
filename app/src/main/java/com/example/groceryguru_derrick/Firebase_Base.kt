@@ -1,6 +1,7 @@
 package com.example.groceryguru_derrick
 
 import android.content.ContentValues.TAG
+import android.database.Cursor
 import android.util.Log
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -8,16 +9,12 @@ import com.google.firebase.ktx.Firebase
 class Firebase_Base {
 
     private val db = Firebase.firestore
-    private val user = hashMapOf(
-        "email" to "nullEM",
-        "username" to "nullUN",
-        "password" to "nullPW",
-    )
 
-    fun writeToUserCollection(){
+    //Function writes user data to firebase collection.
+    fun writeUserName(userData : HashMap<String, Int>) {
 
         db.collection("users")
-            .add(user)
+            .add(userData)
             .addOnSuccessListener { documentReference ->
                 Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
             }
@@ -26,9 +23,22 @@ class Firebase_Base {
             }
     }
 
-    fun readFromUserCollection(){
+    fun writeTask(taskData : String) {
 
         db.collection("users")
+            .add(taskData)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
+    }
+
+    //Function reads user data from firebase.
+    fun getData(collectionName : String){
+
+        db.collection(collectionName)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {

@@ -11,9 +11,19 @@
         android:roundIcon="@drawable/dish"
         android:supportsRtl="true"
         tools:targetApi="31">
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ManageProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBJjbObfjE5jnysF9x-Wdd6slP373U3GGU"/>
+            android:value="AIzaSyBJjbObfjE5jnysF9x-Wdd6slP373U3GGU" />
+
         <activity
             android:name=".RegisterActivity"
             android:exported="true"
@@ -22,7 +32,7 @@
             android:name=".StoreLocatorActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

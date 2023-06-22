@@ -3,18 +3,19 @@
     <item
         android:id="@+id/GroceryListManager"
         android:title="@string/GroceryListName"/>
-
     <item
         android:id="@+id/Locator"
         android:title="@string/StoreName" />
-
     <item
         android:id="@+id/MealManager"
         android:title="@string/MealName" />
-
     <item
         android:id="@+id/LoginSignup"
         android:title="@string/LoginName" />
+    <item
+        android:id="@+id/AccountSettings"
+        android:title="@string/AccountSettings"
+        android:visible="false"/>
     <item
         android:id="@+id/Home"
         android:title="@string/HomePageName" />

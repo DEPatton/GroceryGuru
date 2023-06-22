@@ -11,6 +11,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+//Map element for the Grocery Store locator.
 class MapFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var mapView: MapView
