@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/GroceryListText"
+        android:id="@+id/GroceryList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/GroceryList"
-        android:textColor="@color/fourth_green"
-        android:textSize="25sp" />
+        android:textStyle="bold"
+        android:text="@string/GroceryListName"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="32sp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/grocery_card"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/GroceryListText"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="14dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="5dp"
-        app:cardBackgroundColor="@color/yellow">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/GroceryListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="394dp"
+        android:layout_below="@id/GroceryList"
+        android:nestedScrollingEnabled="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/GroceryListRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="339dp"
-            android:nestedScrollingEnabled="true"
-            android:paddingLeft="30dp"
-            android:paddingTop="45dp"
-            android:paddingRight="30dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/GroceryActionButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/grocery_card"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/circular_button"
-        android:elevation="5dp"
         android:onClick="onAddButtonClick"
-        android:src="@drawable/add_40px" />
-
-    <ImageButton
-        android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="24dp"
-        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/green"
+        android:minHeight="65dp"
+        android:minWidth="65dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/clickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:background="@color/green"
         android:onClick="onMenuClick"
-        android:src="@drawable/menu_48px" />
+        android:src="@android:drawable/ic_menu_more"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
 
 </RelativeLayout>
-

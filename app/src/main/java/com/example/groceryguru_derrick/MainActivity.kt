@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.PopupMenu
 import android.widget.Toast
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
     lateinit var menuimagebutton: ImageButton
+    private var storedValue : String = "tempvalue"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
     fun onSignUpPress(view: View?){
 
         val i = Intent(this, LoginActivity::class.java)
+        startActivity(i)
+        finish()
+    }
+    fun manageAccountClick(view: View?){
+        val i = Intent(this, ManageProfileActivity::class.java)
         startActivity(i)
         finish()
     }
@@ -95,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun onAddButtonClick(v: View) {
         AddNewTask.newInstance()
-            .show(supportFragmentManager, "ActionBottomDialog")
+            .show(supportFragmentManager, AddNewTask.TAG)
     }
     fun onMenuClick(view:View)
     {
@@ -110,6 +115,7 @@ class MainActivity : AppCompatActivity() {
             // Inflating popup menu from popup_menu.xml file
             popupMenu.menuInflater.inflate(R.menu.dropdown_menu, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener { menuItem ->
+               storedValue = menuItem.title as String
                 // Toast message on menu item clicked
                 Toast.makeText(
                     this@MainActivity,
@@ -117,6 +123,11 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
                 true
+            }
+            if(storedValue == "Home"){
+                val i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+                finish()
             }
             // Showing the popup menu
             popupMenu.show()
