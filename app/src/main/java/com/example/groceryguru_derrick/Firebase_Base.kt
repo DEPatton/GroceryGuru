@@ -1,6 +1,7 @@
 package com.example.groceryguru_derrick
 
 import android.content.ContentValues.TAG
+import android.database.Cursor
 import android.util.Log
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -10,7 +11,7 @@ class Firebase_Base {
     private val db = Firebase.firestore
 
     //Function writes user data to firebase collection.
-    fun writeUserName(userData : HashMap<String, String>) {
+    fun writeUserName(userData : HashMap<String, Int>) {
 
         db.collection("users")
             .add(userData)

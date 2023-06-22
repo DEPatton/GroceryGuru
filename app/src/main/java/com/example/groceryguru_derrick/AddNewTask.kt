@@ -11,23 +11,30 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
 
 class AddNewTask : BottomSheetDialogFragment() {
 
-    private var TAG = "ActionBottomDialog"
     private lateinit var newTaskText : EditText
     private lateinit var newTaskSaveButton : Button
-    var isUpdate = false
+    lateinit var tasks: ToDoModel
+    private var isUpdate = false
 
     companion object {
+
+        var TAG = "ActionBottomDialog"
+        lateinit var othertask : ToDoModel
         fun newInstance(): AddNewTask {
             return AddNewTask()
         }
+        fun setTask(tasks : ToDoModel){
+            othertask = tasks
+        }
+
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,29 +89,28 @@ class AddNewTask : BottomSheetDialogFragment() {
             }
         })
         //defining listener for our save button
-        newTaskSaveButton.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View){
-                val text = newTaskText.text.toString()
-                if(isUpdate) {
-                    //Todo: Use firebase to update the task that's already there
-                }
-                else{
-                    //else make a new task
-                    val task = ToDoModel()
-                    task.task = text
-                    task.status = 0
-                }
-                dismiss()
+        newTaskSaveButton.setOnClickListener {
+            val text = newTaskText.text.toString()
+            //this if it to see if we are trying to update a task
+            if (isUpdate) {
+                //Todo: Use firebase to update the task that's already there
+            } else {
+                //else make a new task
+                tasks = ToDoModel()
+                tasks.task = text
+                tasks.status = 0
+                setTask(tasks)
             }
-        })
+            dismiss()
+        }
     }
 
 
 
     override fun onDismiss(dialog: DialogInterface) {
-        val activity : FragmentActivity? = activity
+        val activity = Grocery()
         if (activity is DialogCloseListener) {
-            (activity as DialogCloseListener).handleDialogClose(dialog)
+            activity.handleDialogClose(dialog)
         }
     }
 }
