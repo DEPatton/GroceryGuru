@@ -8,19 +8,19 @@
     tools:layout_editor_absoluteX="-6dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="276dp"
-        android:layout_height="62dp"
-        android:text="Manage Account"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="413dp"
+        android:layout_height="424dp"
+        android:fitsSystemWindows="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/component_2__1" />
 
     <ImageButton
         android:id="@+id/BackPress"
@@ -36,34 +36,64 @@
         app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Change Password"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ChangePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangeUsername"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Change Username"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ChangeUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="1.0" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ChangeUsername"
         android:layout_width="365dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:hint="Change Username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144">
+        app:layout_constraintVertical_bias="0.2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ChangeUsernameMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/edit_text_bg"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ChangePassword"
         android:layout_width="365dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:hint="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257"
+
+        app:layout_constraintTop_toBottomOf="@+id/ChangeUsername"
+        app:layout_constraintVertical_bias="0.1"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/secondary_green">
 
@@ -71,45 +101,53 @@
             android:id="@+id/ChangePasswordMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword" />
+            android:background="@drawable/edit_text_bg"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="226dp"
         android:layout_height="52dp"
-        android:background="#FF3C3C"
-        android:onClick="deleteAccount"
+        android:background="@android:color/transparent"
         android:text="Delete Account"
+        android:textColor="@android:color/holo_red_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.904" />
+
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/profile_button_style"
+        android:backgroundTint="@color/green"
+        android:elevation="8dp"
         android:text="Apply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.733" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/profile_button_style"
+        android:backgroundTint="@color/light_grey"
+        android:elevation="8dp"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintHorizontal_bias="0.634"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.733" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
