@@ -1,3 +1,5 @@
+package com.example.groceryguru_derrick
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
