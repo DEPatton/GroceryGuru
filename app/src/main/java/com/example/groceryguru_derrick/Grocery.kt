@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,37 +19,44 @@ class Grocery : Fragment(), DialogCloseListener {
     var tasksAdapter: ToDoAdapter =ToDoAdapter(this)
     private val taskList = ArrayList<ToDoModel>()
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.grocery_manager_layout, container, false)
+        return inflater.inflate(R.layout.grocery_manager_layout, container, false)
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         tasksRecyclerView = view.findViewById(R.id.GroceryListRecyclerView)
-        tasksRecyclerView.layoutManager = LinearLayoutManager(MainActivity())
         tasksAdapter = ToDoAdapter(this)
         tasksRecyclerView.adapter = tasksAdapter
-
-
+        tasksRecyclerView.layoutManager = LinearLayoutManager(MainActivity())
+        ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(tasksRecyclerView)
         /*this are the example task to check the
         */
         val task = ToDoModel()
-        task.task = "This is a example task"
+        task.task = "Steak"
         task.status = 0
         task.id = 1
         taskList.add(task)
         val othertask = ToDoModel()
-        othertask.task = "This is a other example task"
+        othertask.task = "Eggs"
         othertask.status = 1
         othertask.id = 2
         taskList.add(othertask)
         tasksAdapter.setTasks(taskList)
-
-
-
-        return view
     }
 
+
+
+    fun addData(newModelData: ToDoModel, position: Int) {
+        taskList.add(position, newModelData)
+        tasksAdapter.notifyDataSetChanged()
+    }
     override fun handleDialogClose(dialog : DialogInterface){
-        //Todo: get all the tasks from firebase
         val temp = AddNewTask.othertask
         taskList.add(temp)
         taskList.reverse()
@@ -56,9 +64,26 @@ class Grocery : Fragment(), DialogCloseListener {
         tasksAdapter.notifyDataSetChanged()
 
     }
+    private val itemTouchHelperCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+        // Implement your desired behavior for item swiping or dragging
+        // Override the necessary methods within the callback object
+        // This is an anonymous object that extends ItemTouchHelper.SimpleCallback
+        override fun onMove(
+            recyclerView: RecyclerView,
+            viewHolder: RecyclerView.ViewHolder,
+            target: RecyclerView.ViewHolder
+        ): Boolean {
+            return false
+        }
+
+        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+            taskList.removeAt(viewHolder.adapterPosition)
+            tasksAdapter.notifyDataSetChanged()
+        }
+    }
 }
 class ToDoAdapter(private var activity: Grocery) : RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
-    private var todoList: List<ToDoModel>? = null
+    private var todoList: ArrayList<ToDoModel>? = null
     fun toDoAdapter(activity: Grocery) {
         this.activity = activity
     }
@@ -80,7 +105,7 @@ class ToDoAdapter(private var activity: Grocery) : RecyclerView.Adapter<ToDoAdap
     private fun toBoolean(n: Int?): Boolean {
         return n != 0
     }
-    fun setTasks(list :List<ToDoModel>){
+    fun setTasks(list :ArrayList<ToDoModel>){
         this.todoList = list
     }
     fun editItem(position: Int){
@@ -95,5 +120,6 @@ class ToDoAdapter(private var activity: Grocery) : RecyclerView.Adapter<ToDoAdap
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var task: CheckBox = itemView.findViewById(R.id.todoCheckBox)
     }
+
 }
 
