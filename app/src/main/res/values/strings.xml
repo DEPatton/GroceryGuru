@@ -28,4 +28,10 @@
     <string name="ingredients">Ingredients</string>
     <string name="example_appwidget_description" />
     <string name="element_text" />
+    <string name="GroceryList">My <b>Grocery List</b></string>
+    <string name="manage_account"><b>Manage Account</b></string>
+    <string name="my_recipe"><b>My Recipes</b></string>
+    <string name="favorites"><b>Favorites</b></string>
+    <string name="Saved"><b>Saved</b></string>
+    <string name="settings"><b>Settings</b></string>
 </resources>

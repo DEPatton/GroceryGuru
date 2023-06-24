@@ -10,7 +10,7 @@
         android:id= "@+id/navigation_profile"/>
 
     <item android:title="@string/GroceryListName"
-        android:icon="@drawable/baseline_store_24"
+        android:icon="@drawable/shopping_cart_24px"
         android:id="@+id/navigation_grocery"/>
 
 
