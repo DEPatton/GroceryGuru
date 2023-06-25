@@ -12,27 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/bottom_bg"
-            android:layout_width="415dp"
-            android:layout_height="219dp"
-            android:layout_marginBottom="-6dp"
-            android:src="@drawable/bottom_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/top_bg"
-            android:layout_width="411dp"
-            android:layout_height="201dp"
-            android:layout_marginTop="-1dp"
-            android:src="@drawable/top_bg"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -64,7 +43,8 @@
                     android:elevation="50dp"
                     android:fontFamily="sans-serif"
                     android:paddingStart="30dp"
-                    android:text="Manage Account"
+                    android:text="@string/manage_account"
+                    android:textColor="@color/fourth_green"
                     android:textAlignment="textStart"
                     android:onClick="manageAccountClick"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +64,8 @@
                     android:elevation="50dp"
                     android:fontFamily="sans-serif"
                     android:paddingStart="30dp"
-                    android:text="My Recipes"
+                    android:text="@string/my_recipe"
+                    android:textColor="@color/fourth_green"
                     android:textAlignment="textStart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +84,8 @@
                     android:elevation="50dp"
                     android:fontFamily="sans-serif"
                     android:paddingStart="30dp"
-                    android:text="Favorites"
+                    android:text="@string/favorites"
+                    android:textColor="@color/fourth_green"
                     android:textAlignment="textStart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +104,8 @@
                     android:elevation="50dp"
                     android:fontFamily="sans-serif"
                     android:paddingStart="30dp"
-                    android:text="Saved"
+                    android:text="@string/Saved"
+                    android:textColor="@color/fourth_green"
                     android:textAlignment="textStart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -141,7 +124,8 @@
                     android:elevation="50dp"
                     android:fontFamily="sans-serif"
                     android:paddingStart="30dp"
-                    android:text="Settings"
+                    android:text="@string/settings"
+                    android:textColor="@color/fourth_green"
                     android:textAlignment="textStart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -164,6 +148,22 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
+
+                <ImageButton
+                    android:id="@+id/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="onMenuClick"
+                    android:src="@drawable/menu_48px"
+                    app:layout_constraintBottom_toTopOf="@+id/profileName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.931"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.228" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
